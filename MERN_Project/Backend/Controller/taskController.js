@@ -1,5 +1,6 @@
 import {User , Login_details} from '../Models/models.js'; 
-import bcrypt from 'bcrypt'
+import bcrypt from "bcryptjs";
+
 import jwt from 'jsonwebtoken';
 
 
