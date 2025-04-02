@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './CSS/View_Exp.css';
+import { API_URL } from '../utils';
 
 function View_Exp() {
     const [expenses, setExpenses] = useState([]);
@@ -13,7 +14,7 @@ function View_Exp() {
 
     const fetchExpenses = () => {
         const userId = localStorage.getItem('userId');  // Fetch the userId from localStorage
-        fetch(`http://localhost:3000/expenses/${userId}`, {
+        fetch(`${API_URL}/expenses/${userId}`, {
             method: "GET",
             headers: {
                 'Authorization': `Bearer ${userId}`,  // Send the userId as Authorization header
@@ -36,7 +37,7 @@ function View_Exp() {
     const handleDelete = (expenseId) => {
         const userId = localStorage.getItem('userId');
 
-        fetch(`http://localhost:3000/expenses/${expenseId}`, {
+        fetch(`${API_URL}/expenses/${expenseId}`, {
             method: "DELETE",
             headers: {
                 'Authorization': `Bearer ${userId}`,
@@ -102,12 +103,12 @@ function View_Exp() {
                         ))}
                     </select>
                 </div>
-                <h3 style={{ cursor: 'pointer', color: 'white' }}>Total Amount: ${totalAmount}</h3>
+                <h3 style={{ cursor: 'pointer', color: 'white' }}>Total Amount: ₹{totalAmount}</h3>
                 <ul className="expense-list">
                     {filteredExpenses.length > 0 ? (
                         filteredExpenses.map((expense, index) => (
                             <li key={expense._id}>
-                                {expense.Description}: <strong>${expense.Amount}</strong> 
+                                {expense.Description}: <strong>₹{expense.Amount}</strong> 
                                 <br />
                                 <small>Date: {formatDate(expense.Date)}</small> {/* Display Date */}
                                 <span onClick={() => handleDelete(expense._id)} style={{ cursor: 'pointer', color: 'white' }}> -</span>

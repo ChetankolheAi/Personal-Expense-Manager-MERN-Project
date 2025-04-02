@@ -40,7 +40,7 @@ const Footer = () => {
           <h3>Contact</h3>
           <div className="contact-info">
             <img src={emailIcon} alt="Email Icon" />
-            <p>Email: Chetankolhe@gmail.com</p>
+            <p>Email: support@cashflow.com</p>
           </div>
         </div>
       </div>

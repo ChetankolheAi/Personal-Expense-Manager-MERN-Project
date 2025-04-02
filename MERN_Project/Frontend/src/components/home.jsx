@@ -55,7 +55,7 @@ function MainPage() {
     <div className="container">
 
 
-      {/* Home Section */}
+    
       <section id="home" className="home-container">
         <div className="home">
           <div className="info">
@@ -86,7 +86,6 @@ function MainPage() {
 
 
 
-      {/* Services Section */}
       <section id="services" className="services-container">
         <div className="services-wrapper">
           <h1>Our Services</h1>
@@ -119,7 +118,7 @@ function MainPage() {
 
 
 
-      {/* About Section */}
+    
       <section id="about" className="about-container">
         <div className="about_conatiner1">
           
@@ -140,7 +139,6 @@ function MainPage() {
 
 
 
-      {/* Contact Section */}
       <section id="contact" className="contact-container">
         <form className="contact-form">
           <h1>Contact Us</h1>

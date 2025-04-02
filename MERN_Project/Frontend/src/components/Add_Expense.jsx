@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CSS/Add_Expense.css'; // Import CSS
 import { useNavigate } from 'react-router-dom';
-
+import { API_URL } from '../utils';
 function AddExpense() {
     const userId = localStorage.getItem('userId');
     const monthNames = [
@@ -42,7 +42,7 @@ function AddExpense() {
         event.preventDefault();
 
         try {
-            const response = await fetch("http://localhost:3000/Add", {
+            const response = await fetch(`${API_URL}/Add`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -74,7 +74,7 @@ function AddExpense() {
 
     return (
         <div className="expense-wrapper">
-            {/* Add Expense Form */}
+           
             <div className="expense-form-container">
                 <h2>Add Expense</h2>
                 <form onSubmit={handleSubmit} className="expense-form">
@@ -93,7 +93,7 @@ function AddExpense() {
                         required
                     />
                     
-                    {/* Date Picker - Updates Month & Year automatically */}
+                 
                     <input 
                         type="date" 
                         value={user.Date} 
@@ -101,7 +101,6 @@ function AddExpense() {
                         required
                     />
 
-                    {/* Month Display (Auto-updated as name) */}
                     <input 
                         type="text"
                         value={user.Month}
@@ -109,7 +108,7 @@ function AddExpense() {
                         disabled
                     />
 
-                    {/* Year Display (Auto-updated) */}
+                  
                     <input 
                         type="text"
                         value={user.Year}
