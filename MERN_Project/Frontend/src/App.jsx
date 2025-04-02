@@ -8,7 +8,8 @@ import Footer from './pages/footer';
 import View_Expense from './components/View_Exp';
 import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import RefrshHandler from './RefereshHandler';
-
+import { ToastContainer , Slide} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -17,13 +18,13 @@ function App() {
   };
 
   return (
-    
+ 
     <Router>
      
       <div className="app-container">
 
       <Navbar />
-
+      <ToastContainer transition={Slide} /> 
         <div className="content-container">
         
           <RefrshHandler setIsAuthenticated={setIsAuthenticated}/>

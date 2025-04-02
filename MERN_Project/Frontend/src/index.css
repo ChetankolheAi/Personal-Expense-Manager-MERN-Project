@@ -1,0 +1,36 @@
+
+.toast-success {
+    background-color: #020039 !important;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 100px;
+}
+
+
+.toast-error {
+    background-color: #020039 !important;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+
+.toast-warning {
+    background-color: #020039 !important; 
+    color: rgb(255, 255, 255) !important;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 12px;
+}
+.toast-info {
+    background-color: #020039 !important; 
+    color: rgb(255, 255, 255) !important;
+    font-weight: bold;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    
+}

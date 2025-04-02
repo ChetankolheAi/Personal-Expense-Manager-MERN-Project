@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import './CSS/login.css';
+import { API_URL, notify } from '../utils';
 
 function Login() {
   const [user, setUser] = useState({
@@ -15,7 +16,7 @@ function Login() {
     
     
     try{
-      const url ="http://localhost:3000/api/login";
+      const url =`${API_URL}/api/login`;
       const response = await fetch(url, {
     
       method: 'POST',
@@ -34,7 +35,7 @@ function Login() {
 
         console.log(message)
         
-        alert(message)
+        notify(message ,'success');
         
         localStorage.setItem('token',jwtToken);
         localStorage.setItem("userId", _id);
@@ -50,13 +51,13 @@ function Login() {
 
     }else if(result.success == false){
       
-      alert(message)
+      notify(message ,'error');
       console.log("Someting Went Wrong ! Try Again")
 
     }
   } catch (error) {
 
-      alert('An error occurred. Please try again later.');
+       notify("Something Went Wrong ! Try Again Later !" ,'info');
       
   }
 

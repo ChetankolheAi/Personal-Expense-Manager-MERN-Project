@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CSS/Add_Expense.css'; // Import CSS
 import { useNavigate } from 'react-router-dom';
-import { API_URL } from '../utils';
+import { API_URL , notify } from '../utils';
 function AddExpense() {
     const userId = localStorage.getItem('userId');
     const monthNames = [
@@ -52,10 +52,13 @@ function AddExpense() {
             });
 
             if (!response.ok) {
-                throw new Error('Failed to add expense');
+                 
+                notify("Falied To Add Expenses" ,'error');
+                
             }
             else{
-                alert("Expense added successfully!");
+                notify("Expense added Successfully" ,'success');
+                
             }
 
             setUser({

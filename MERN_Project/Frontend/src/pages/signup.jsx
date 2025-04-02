@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import './CSS/signup.css'
+import { API_URL, notify } from '../utils';
+
 function Signup() {
   const [user, setUser] = useState({
     username: '',
@@ -13,19 +15,19 @@ function Signup() {
 
   const handleClick = async () => {
     if (user.password !== user.confirmpassword) {
-      alert("Confirm Password Don't Match");
+      notify("Confirm Password Don't Match" ,'success');
       return;
     }
 
     if (user.password.length < 8) {
-      alert("Password Too Small");
+      notify("Password To Small" ,'warning');
       return;
     }
 
     const { confirmpassword, ...userData } = user;
 
     try {
-      const response = await fetch('http://localhost:3000/api/signup', {
+      const response = await fetch(`${API_URL}/api/signup`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json"
@@ -36,20 +38,20 @@ function Signup() {
       const result = await response.json();
     
       
-      alert(result.message)
+ 
       if (result.success == true) {
-          
-          alert("Navigating to Login")
+          notify(result.message , 'success')
+          alert("Navigating to Login Page")
           setTimeout(() => navigate('/login'), 800);
         
       }
       else if(result.success == false){
 
-        alert(result.message)
+        notify(result.message,'error')
 
       }
     } catch (error) {
-      alert('An error occurred. Please try again later.');
+       notify("Something Went Wrong ! Try Again Later !" ,'info');
     }
   }
 

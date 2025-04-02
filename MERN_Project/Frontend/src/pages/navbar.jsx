@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaUserCircle, FaBars, FaTimes } from 'react-icons/fa'; // Hamburger and Close Icons
+import { API_URL, notify } from '../utils';
 
 import './CSS/navbar.css';
 
@@ -41,7 +42,7 @@ function Navbar() {
       localStorage.removeItem('token');
       localStorage.removeItem('loggedInUser');
       window.dispatchEvent(new Event('storage'));
-      alert('User Logged Out Successfully');
+       notify("User Logged Out Successfully" ,'success');
       navigate('/login');
     }
   };
