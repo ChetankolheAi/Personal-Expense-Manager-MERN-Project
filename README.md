@@ -54,13 +54,13 @@ PORT=5000
 ### 4️⃣ Run the app
 Backend:
 ```bash
-cd server
-npm start
+cd Backend
+node Server.js
 ```
 Frontend:
 ```bash
-cd client
-npm start
+cd Frontend
+npm run dev
 ```
 
 ---
@@ -74,14 +74,12 @@ npm start
 ---
 
 ## 🔗 Links
-- **Live Demo:** [Click here](https://lnkd.in/dP7i9M-t)  
-- **GitHub Repo:** [PayFlow Repository](https://lnkd.in/dJV8kCNV)  
+- **Live Demo:** [Click here]([https://lnkd.in/dP7i9M-t](https://expensemanger-bp1g.onrender.com/))   
 
 ---
 
 ## 📜 License
-This project is licensed under the [MIT License](LICENSE).
-
+This Project is Free Source
 ---
 
 ## 🙌 Acknowledgments
