@@ -74,7 +74,7 @@ npm run dev
 ---
 
 ## 🔗 Links
-- **Live Demo:** [Click here]([https://lnkd.in/dP7i9M-t](https://expensemanger-bp1g.onrender.com/))   
+- **Live Demo:** "https://expensemanger-bp1g.onrender.com/home"   
 
 ---
 
