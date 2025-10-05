@@ -1,6 +1,6 @@
-# 💰 PayFlow – Smart Personal Expense Tracker
+# 💰 FinSyncy – Smart Personal Expense Tracker
 
-PayFlow is a modern web application that helps users **track, categorize, and analyze** their expenses.  
+FinSyncy is a modern web application that helps users **track, categorize, and analyze** their expenses.  
 Built using the **MERN Stack**, it offers a secure, intuitive, and responsive platform for better personal finance management.
 
 ---
