@@ -9,7 +9,6 @@ function Navbar() {
   const [loggedInUser, setLoggedInUser] = useState(localStorage.getItem('loggedInUser') || '');
   const [emailuser, setemailUser] = useState(localStorage.getItem('email') || '');
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'));
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // For toggling mobile menu
   const navigate = useNavigate();
   let dropdownMenu = document.getElementById('Drop-down');
@@ -62,7 +61,7 @@ function Navbar() {
     <>
     <div id="navbar">
       <div className="logo">
-        <h4>CashFlow</h4>
+        <h4>FinSyncy</h4>
       </div>
 
       {/* Hamburger Menu */}

@@ -75,7 +75,7 @@ function MainPage() {
           </div>
          
           <div className="card">
-          <h1>CashFlow</h1>
+          <h1>FinSyncy</h1>
           <p> "Managing your personal finances doesn’t have to be complicated. Our expense tracker is designed to help you track every dollar you spend, categorize your expenses. Start tracking today and take the first step toward smarter financial decisions!" </p>
           </div>
         </div>
@@ -124,14 +124,14 @@ function MainPage() {
           
           <h1>About Us</h1>
           <p>
-            Welcome to <strong>CashFlow</strong>, a personal finance manager designed to help you track and manage your expenses easily.
+            Welcome to <strong>FinSyncy</strong>, a personal finance manager designed to help you track and manage your expenses easily.
           </p>
           <p>
             Our goal is to make personal finance management simpler, allowing you to stay on top of your spending and savings.
             You can add daily expenses, track your spending habits, and plan your budget effectively.
           </p>
           
-          <p>Thank you for choosing <strong>CashFlow</strong>. We hope it helps you take control of your financial future!</p>
+          <p>Thank you for choosing <strong>FinSyncy</strong>. We hope it helps you take control of your financial future!</p>
         </div>
       </section>
 

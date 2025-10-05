@@ -106,7 +106,7 @@ function View_Exp() {
                 <h3 style={{ cursor: 'pointer', color: 'white' }}>Total Amount: ₹{totalAmount}</h3>
                 <ul className="expense-list">
                     {filteredExpenses.length > 0 ? (
-                        filteredExpenses.map((expense, index) => (
+                        filteredExpenses.map((expense) => (
                             <li key={expense._id}>
                                 {expense.Description}: <strong>₹{expense.Amount}</strong> 
                                 <br />
